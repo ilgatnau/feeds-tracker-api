@@ -13,6 +13,9 @@ public class UserDetailsApi {
 
     @GetMapping(value = "/users/{id}")
     public User getUserDetails(@PathVariable String id) {
-        return null;
+        User user = new User();
+        user.setName(id);
+
+        return user;
     }
 }
