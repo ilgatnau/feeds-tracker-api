@@ -18,6 +18,7 @@ public class UserDetailsApi {
 
     @GetMapping(value = "/users/{id}")
     public User getUserDetails(@PathVariable String id) {
+
         Customer customer = customerRepository.findById(id).get();
 
         User user = new User();
